@@ -33,7 +33,7 @@ def get_secret(setting, secrets=secrets):
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_secret('SECRET_KEY_VIDEO_2')
+SECRET_KEY = get_secret('SECRET_KEY_VIDEO_3')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -92,14 +92,24 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': 'db',
+#         'PORT': 5432,
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django-app-db',
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'db',
-        'PORT': 5432,
+        'PORT': '3306',
     }
 }
 
