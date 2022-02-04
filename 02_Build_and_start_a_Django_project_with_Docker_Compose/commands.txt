@@ -1,0 +1,2 @@
+docker-compose build        ## Cria uma imagem para rodar os docker-compose posteriormente
+docker-compose run --rm app django-admin startproject core .
